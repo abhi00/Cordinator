@@ -21,6 +21,8 @@ public class SignUpActivity extends AppCompatActivity {
     DbHelper dbHelper;
     private static final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{8,40})";
     private AwesomeValidation awesomeValidation;
+    private AwesomeValidation awesomeValidatiofn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
