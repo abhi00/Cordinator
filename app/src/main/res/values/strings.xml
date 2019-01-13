@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">DronaApp</string>
+    <string name="email_error">Email is Not in Valid Format!</string>
+    <string name="pass_error">PassWord Must Contain one digit from 0-9\n at least one upper case characte\nContain at least on special character from [ @ # $ % ! . ]</string>
+
+    <string name="tequila_name">Tequila</string>
+    <string name="tequila_tagline">Is an alcoholic beverage</string>
+    <string name="tequila_title">Tequila!</string>
+    <string-array name="dashboard">
+        <item>HomeWork</item>
+        <item>Circular</item>
+        <item>News</item>
+        <item>Events</item>
+        <item>Fee Summary</item>
+        <item>Online Payment</item>
+        <item>Fee Due Details</item>
+        <item>Exam Schedule</item>
+        <item>Exam Report</item>
+        <item>Transport</item>
+        <item>Attendance</item>
+        <item>Leave</item>
+
+    </string-array>
+
+    <string-array name="dashboard_admin">
+        <item>Add Teacher</item>
+        <item>View Teacher</item>
+        <item>View Student</item>
+        <item>BroadCast</item>
+        <item>Teacher Meeting</item>
+
+
+    </string-array>
+
+    <string-array name="dashboard_teacher">
+        <item>Add Student</item>
+        <item>Post Homework</item>
+        <item>Take Attendence</item>
+        <item>View Student</item>
+        <item>Student Fees</item>
+        <item>Student Leave Request</item>
+        <item>Teacher Leave </item>
+        <item>Staff Meeting</item>
+
+        <item></item>
+
+
+    </string-array>
+    <string-array name="notice_category">
+        <item>HomeWork</item>
+        <item>Alert</item>
+        <item>Notice</item>
+        <item>Warning</item>
+    </string-array>
+    <string-array name="select_class">
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>5th</item>
+    </string-array>
+    <string-array name="section">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string-array name="user_catagory">
+        <item>Everyone</item>
+        <item>Specific Student</item>
+    </string-array>
+    <string-array name="teacher_name">
+        <item>teachA</item>
+        <item>teachB</item>
+        <item>teachC</item>
+        <item>teachD</item>
+        <item>teachE</item>
+    </string-array>
+    <string name="title_activity_my_bar">MyBarActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

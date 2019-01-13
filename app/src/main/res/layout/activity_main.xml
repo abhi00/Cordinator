@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/expanded_toolbar_height"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+            <FrameLayout
+                android:id="@+id/myframe"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/linear_myframe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/spacing_small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="bottom|center"
+                        android:text="@string/tequila_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textsize_xlarge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/spacing_xxsmall"
+                        android:text="@string/tequila_tagline"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>>
+    <android.support.v7.widget.RecyclerView
+        android:gravity="center"
+        android:id="@+id/recy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@drawable/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_anchor="@id/collapsing_layout"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <Space
+                android:layout_width="@dimen/image_final_width"
+                android:layout_height="@dimen/image_final_width" />
+
+            <TextView
+                android:textSize="@dimen/textsize_large"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical"
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:text="@string/tequila_title" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_gravity="center|top"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_width"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:src="@drawable/person"
+        app:finalHeight="@dimen/image_final_width"
+        app:finalToolbarHeight="?actionBarSize"
+        app:finalXPosition="@dimen/spacing_small"
+        app:finalYPosition="@dimen/spacing_small"
+        app:layout_behavior="com.aptron.cordinator.AvatarImageBehavior" />
+</android.support.design.widget.CoordinatorLayout>
