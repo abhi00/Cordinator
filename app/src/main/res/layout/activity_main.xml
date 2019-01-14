@@ -32,6 +32,7 @@
                     android:paddingBottom="@dimen/spacing_small">
 
                     <TextView
+                        android:id="@+id/bottem_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -41,6 +42,7 @@
                         android:textSize="@dimen/textsize_xlarge" />
 
                     <TextView
+                        android:id="@+id/bottem_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"

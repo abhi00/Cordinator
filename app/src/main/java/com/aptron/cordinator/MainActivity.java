@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
     private boolean mIsTheTitleVisible          = false;
     private boolean mIsTheTitleContainerVisible = true;
     private LinearLayout mTitleContainer;
-    private TextView mTitle;
+    private TextView mTitle,botem_title,botem_text;
     private AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
     private static final String USER_TYPE  = "type";
@@ -42,16 +42,20 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recy);
 
-    // Bundle  bundle =  getIntent().getExtras();
-   //String type =  bundle.getString(USER_TYPE);
+        bindActivity();
+
+
+        Bundle  bundle =  getIntent().getExtras();
+   String type =  bundle.getString(USER_TYPE);
         recyclerView.setLayoutManager(new GridLayoutManager(this,3));
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard),listener,img_parent));
 
 
-    /* switch (type)
+     switch (type)
         {
             case "admin":
+                botem_title.setText("Welcome Admin");
+                botem_text.setText(" Basic Information of Admin");
               listener  = (view, position) -> {
                     Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
                 };
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case "parent":
+                botem_title.setText("Welcome Parent");
+                botem_text.setText(" Basic Information of Parent");
                  listener = (view, position) -> {
                     Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
                 };
@@ -68,47 +74,30 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case "teacher":
+                botem_title.setText("Welcome parent");
+                botem_text.setText(" Basic Information of Parent");
                listener = (view, position) -> {
-                    Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
-                };
+
+                   if(position==1)
+                   {
+
+                       startActivity(new Intent(MainActivity.this,HomeworkActivity.class));
+                   }
+                   else if(position==6)
+                   {
+
+                       startActivity(new Intent(MainActivity.this,LeaveFormActivity.class));
+
+
+                   }
+                            };
                 recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard_teacher),listener,img_teacher));
 
                 break;
 
 
         }
-        */
-      /* recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard_admin),img_admin));
 
-
-
-    if(type =="parent")
-   {
-
-       recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard_parent),img_parent));
-
-
-
-
-   }
-
-   else if(type =="teacher")
-        {
-
-
-            recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard_teacher),img_teacher));
-
-
-
-
-        }
-*/
-
-
-
-
-
-        bindActivity();
 
        mAppBarLayout.addOnOffsetChangedListener(this);
 
@@ -119,8 +108,10 @@ public class MainActivity extends AppCompatActivity
     private void bindActivity() {
         mToolbar        = findViewById(R.id.toolbar);
         mTitle          =  findViewById(R.id.title);
-        mTitleContainer = findViewById(R.id.linear);
+        mTitleContainer = findViewById(R.id.linear_myframe);
         mAppBarLayout   = findViewById(R.id.appbar);
+        botem_title     = findViewById(R.id.bottem_title);
+        botem_text      = findViewById(R.id.bottem_text);
     }
 
     @Override
