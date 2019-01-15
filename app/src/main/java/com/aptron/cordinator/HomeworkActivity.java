@@ -25,6 +25,7 @@ public class HomeworkActivity extends AppCompatActivity {
         section_spinner = findViewById(R.id.section_spinn);
         usercatagory_spinner = findViewById(R.id.userCatagory_spinn);
 
+
         text = findViewById(R.id.editTextHmwrk);
         submit = findViewById(R.id.submit_button);
         attach_btn= findViewById(R.id.attach_button);

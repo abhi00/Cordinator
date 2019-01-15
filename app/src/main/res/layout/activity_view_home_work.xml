@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViewHomeWork">
+    tools:context=".ViewHomeWork"
+    android:background="@color/cardview_shadow_end_color">
 
     <include layout="@layout/app_bar_my_bar"/>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_marginTop="10sp"
+        android:id="@+id/homeWork_Post"
+        >
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

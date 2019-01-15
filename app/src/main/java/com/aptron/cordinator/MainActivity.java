@@ -67,7 +67,11 @@ public class MainActivity extends AppCompatActivity
                 botem_title.setText("Welcome Parent");
                 botem_text.setText(" Basic Information of Parent");
                  listener = (view, position) -> {
-                    Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
+                    if(position==0)
+                    {
+                        startActivity(new Intent(MainActivity.this,HomeworkActivity.class));
+
+                    }
                 };
                 recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard),listener,img_parent));
 
