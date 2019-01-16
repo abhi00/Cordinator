@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                  listener = (view, position) -> {
                     if(position==0)
                     {
-                        startActivity(new Intent(MainActivity.this,HomeworkActivity.class));
+                        startActivity(new Intent(MainActivity.this,ViewHomeWork.class));
 
                     }
                 };
