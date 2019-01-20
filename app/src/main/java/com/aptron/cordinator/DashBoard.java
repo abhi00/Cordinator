@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+public class DashBoard extends AppCompatActivity
         implements AppBarLayout.OnOffsetChangedListener{
    RecyclerView recyclerView;
     private static final float PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR  = 0.6f;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity
                 botem_title.setText("Welcome Admin");
                 botem_text.setText(" Basic Information of Admin");
               listener  = (view, position) -> {
-                    Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DashBoard.this, "Position " + position, Toast.LENGTH_SHORT).show();
                 };
                 recyclerView.setAdapter(new MyImageAdapter(this,getResources().getStringArray(R.array.dashboard_admin),listener,img_admin));
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                  listener = (view, position) -> {
                     if(position==0)
                     {
-                        startActivity(new Intent(MainActivity.this,ViewHomeWork.class));
+                        startActivity(new Intent(DashBoard.this,ViewHomeWork.class));
 
                     }
                 };
@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity
                    if(position==1)
                    {
 
-                       startActivity(new Intent(MainActivity.this,HomeworkActivity.class));
+                       startActivity(new Intent(DashBoard.this,HomeworkActivity.class));
                    }
                    else if(position==6)
                    {
 
-                       startActivity(new Intent(MainActivity.this,LeaveFormActivity.class));
+                       startActivity(new Intent(DashBoard.this,LeaveFormActivity.class));
 
 
                    }

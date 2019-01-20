@@ -128,11 +128,13 @@
         android:textStyle="bold|italic"
         android:textColor="#fff"
         android:textSize="30dp" />
+
     <ImageView
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/school"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/school" />
 
 </RelativeLayout>

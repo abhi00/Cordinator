@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
@@ -71,21 +70,21 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent;
                     if(status && type=="admin")
                     {
-                        intent = new Intent(LoginActivity.this,MainActivity.class);
+                        intent = new Intent(LoginActivity.this,DashBoard.class);
                         intent.putExtra(USER_TYPE,"admin");
                        startActivity(intent);
 
                     }
                     else if(status && type=="parent")
                     {
-                        intent = new Intent(LoginActivity.this,MainActivity.class);
+                        intent = new Intent(LoginActivity.this,DashBoard.class);
                         intent.putExtra(USER_TYPE,"parent");
                         startActivity(intent);
 
                     }
                     else  if(status && type=="teacher")
                     {
-                        intent = new Intent(LoginActivity.this,MainActivity.class);
+                        intent = new Intent(LoginActivity.this,DashBoard.class);
                         intent.putExtra(USER_TYPE,"teacher");
                         startActivity(intent);
 
