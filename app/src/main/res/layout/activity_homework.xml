@@ -1,133 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/background_login"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <LinearLayout
+    tools:context=".HomeworkActivity"
+   >
+
+    <include layout="@layout/app_bar_my_bar"/>
+    <android.support.v7.widget.CardView
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:weightSum="8"
-        android:layout_height="match_parent">
+        android:layout_weight="1"
+        android:elevation="9dp"
+        android:layout_margin="15dp"
+        android:background="#eae4e4"
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:textColor="#000"
-            android:text="Post Homework"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"
-            android:text="Select Catagory"
-            android:textSize="20dp" />
-
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="6dp"
-            android:layout_weight="0.5"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/catagary_spinn"
-            >
-
-        </Spinner>
-
-
+        xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:orientation="horizontal"
-            android:layout_weight="0.5"
-            android:weightSum="3">
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:textColor="#000"
-                android:text="Select Class"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="Section"
-                android:textColor="#000"
-                android:textSize="20dp" />
+                android:weightSum="8"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:textColor="#000"
+                    android:text="Post Homework"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal"
-            android:layout_weight="0.5"
-            android:weightSum="3">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="Select Catagory"
+                    android:textSize="20dp" />
 
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:id="@+id/class_spinn"></Spinner>
 
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/catagary_spinn"
+                    >
+
+                </Spinner>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textColor="#000"
+                        android:text="Select Class"
+                        android:textSize="20dp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Section"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/class_spinn"></Spinner>
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/section_spinn"
+                        ></Spinner>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="Select User Catagory"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/userCatagory_spinn"
+                    ></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:id="@+id/section_spinn"
-                ></Spinner>
+                android:orientation="vertical"
+                android:weightSum="5">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
 
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/editTextHmwrk"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="4"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="#fff"
+                        android:background="@drawable/btn_dsgn"
+                        android:id="@+id/submit_button"
+                        android:text="submit"/>
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:background="@drawable/btn_dsgn"
+                        android:src="@drawable/ic_stat_attachfile"
+                        android:layout_height="match_parent"
+                        android:id="@+id/attach_button"
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:background="@drawable/btn_dsgn"
+                        android:src="@drawable/ic_stat_cam"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cam_button"
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:background="@drawable/btn_dsgn"
+                        android:src="@drawable/ic_stat_camara"
+                        android:layout_height="match_parent"
+                        android:id="@+id/video_button"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"
-            android:text="Select User Catagory"
-            android:textSize="20dp" />
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="6dp"
-            android:layout_weight="0.5"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/userCatagory_spinn"
-            ></Spinner>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_marginTop="6dp"
-            android:id="@+id/editTextHmwrk"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
 
-
-</RelativeLayout>
+</LinearLayout>

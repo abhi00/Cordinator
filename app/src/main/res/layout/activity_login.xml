@@ -62,14 +62,18 @@
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_person"
             android:drawablePadding="20dp"
-            android:hint="*****" />
+            android:hint="*****"
+            android:inputType="textPassword"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
-
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
             <RadioButton
                 android:id="@+id/rd_btn_admin_login"
                 android:layout_width="0dp"
@@ -90,6 +94,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="parent" />
+            </RadioGroup>
+
         </LinearLayout>
 
         <Button
@@ -122,11 +128,13 @@
         android:textStyle="bold|italic"
         android:textColor="#fff"
         android:textSize="30dp" />
+
     <ImageView
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/school"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/school" />
 
 </RelativeLayout>

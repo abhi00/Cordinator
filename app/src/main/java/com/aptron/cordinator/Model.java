@@ -10,16 +10,31 @@ public class Model {
     public int sub_image;
     public String subject;
 
-    public Model(int type, String text, int image,int sub_image ,String subject)
+    public String date_text;
+
+
+
+    public String getDate_text() {
+        return date_text;
+    }
+
+    public void setDate_text(String date_text) {
+        this.date_text = date_text;
+    }
+
+    public Model(int type, String text, int image, int sub_image , String subject,String date_text)
     {
         this.type=type;
         this.image = image;
         this.text=text;
         this.sub_image= sub_image;
         this.subject = subject;
+        this.date_text = date_text;
+
     }
 
     public static int getTextType() {
+
         return TEXT_TYPE;
     }
 

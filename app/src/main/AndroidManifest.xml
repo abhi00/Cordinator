@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".DashBoard">
 
         </activity>
         <activity android:name=".SplashActivity">
@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeworkActivity" />
-        <activity android:name=".LeaveFormActivity" />
+        <activity android:name=".LeaveFormActivity">
+
+        </activity>
         <activity android:name=".ViewHomeWork">
 
         </activity>
